@@ -10,41 +10,23 @@ namespace Snake2
     {
         static void Main(string[] args)
         {
-            //Инкапсуляция, скрываем реализацию в Конструкторе
-            Point p1 = new Point(1,3,'*');
-            p1.Draw();
+            Console.SetBufferSize(130, 30);
 
-            Point p2 = new Point(4,5,'#');
-            p2.Draw();
+            //Отрисовка линий
+            HorizontalLine upLine = new HorizontalLine(0, 78, 0,'+');
+            HorizontalLine downLine = new HorizontalLine(0, 78, 24, '+');
 
-            Point p3 = new Point(16, 8, '$');
-            p3.Draw();
+            VerticalLine leftLine = new VerticalLine(0, 24, 0, '+');
+            VerticalLine rightLine = new VerticalLine(0, 24, 78, '+');
 
-            Point p4 = new Point(14, 15, '&');
-            p4.Draw();
+            upLine.Drow();
+            downLine.Drow();
+            leftLine.Drow();
+            rightLine.Drow();
 
+            Point p = new Point(4,5,'*');
+            p.Draw();
 
-            List<int> numList = new List<int>();
-            numList.Add(0);
-            numList.Add(1);
-            numList.Add(2);
-
-            int x = numList[0];
-            int y = numList[1];
-            int z = numList[2];
-
-            numList.RemoveAt(2);
-
-            foreach (int i in numList)
-            {
-                Console.WriteLine(i);
-            }
-
-            List<Point> pList = new List<Point>();
-            pList.Add(p1);
-            pList.Add(p2);
-            pList.Add(p3);
-            pList.Add(p4);
 
             Console.ReadLine();
         }
