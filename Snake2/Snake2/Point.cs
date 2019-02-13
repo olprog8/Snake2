@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Snake2
 {
+    //Классы, например, Point ничего не знает о внешнем мире
     class Point
     {
         public int x;
@@ -45,6 +46,13 @@ namespace Snake2
                 y = y - offset;
             }
 
+        }
+
+        internal void Clear()
+        {
+            //Отрисовываем Пробел
+            sym = ' ';
+            Draw();
         }
 
         public void Draw()
