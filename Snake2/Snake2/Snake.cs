@@ -52,6 +52,21 @@ namespace Snake2
             return nextPoint;
         }
 
+        internal bool Eat(Point food)
+        {
+            Point head = GetNextPoint();
+
+            if (head.IsHit(food))
+            {
+                food.sym = head.sym; //меняем символ еды на символ  тела змейки
+                pList.Add(food);
+
+                return true;
+            }
+            else
+                return false;
+        }
+
         public void HandleKey(ConsoleKey key)
         {
             if (key == ConsoleKey.LeftArrow)

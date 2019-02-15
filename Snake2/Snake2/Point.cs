@@ -65,5 +65,12 @@ namespace Snake2
         {
             return x + ", " + y + ", " + sym;
         }
+
+        //12 урок проверка Пересечения
+        public bool IsHit(Point p)
+        {
+            //Интересное условие!!!
+            return p.x == this.x && p.y == this.y;
+        }
     }
 }
