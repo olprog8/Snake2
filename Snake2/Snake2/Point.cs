@@ -7,8 +7,11 @@ using System.Threading.Tasks;
 namespace Snake2
 {
     //Классы, например, Point ничего не знает о внешнем мире
+    //p, food, является объектом класса Point
+    
     class Point
     {
+        //Поля класса
         public int x;
         public int y;
         public char sym;
